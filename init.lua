@@ -20,3 +20,4 @@ vim.cmd('autocmd BufWritePost plugins.lua PackerCompile') -- Auto compile when t
 
 require("plugins")
 require("colorscheme")
+require("lang")

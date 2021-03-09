@@ -35,6 +35,11 @@ _G.packer_plugins = {
   ["gruvbox-material"] = {
     loaded = true,
     path = "/home/tzz/.local/share/nvim/site/pack/packer/start/gruvbox-material"
+  },
+  ["packer.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/tzz/.local/share/nvim/site/pack/packer/opt/packer.nvim"
   }
 }
 
