@@ -10,8 +10,9 @@ return require("packer").startup(function()
 		 requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
 	 }
      use {'preservim/nerdtree'}
-     use {'junegunn/fzf'}
+     use {'junegunn/fzf'} -- fzf#install()
      use {'junegunn/fzf.vim'}
+     use {'MattesGroeger/vim-bookmarks'}
 	 -- use'kyazdani42/nvim-web-devicons' -- for file icons
 	 -- use 'kyazdani42/nvim-tree.lua'
 end)

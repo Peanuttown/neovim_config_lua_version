@@ -7,6 +7,8 @@ require("jump_settings")
 local fn = vim.fn
 local execute= vim.cmd
 
+execute("let g:bookmark_no_default_key_mappings = 1")
+
 -- Auto install packer.nvim if not exists
 local install_path = fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
