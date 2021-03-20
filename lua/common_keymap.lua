@@ -45,3 +45,5 @@ vim.cmd("nnoremap <s-u> :e#<CR>")
 vim.o.wildignorecase=true
 vim.wo.number = true
 -- ဈ
+
+vim.cmd("nnoremap -ep :e ~/.config/nvim/lua/plugins.lua<CR>")

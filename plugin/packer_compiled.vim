@@ -32,14 +32,50 @@ local function try_loadstring(s, component, name)
 end
 
 _G.packer_plugins = {
+  ["completion-nvim"] = {
+    loaded = true,
+    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/completion-nvim"
+  },
+  ["dart-vim-plugin"] = {
+    loaded = true,
+    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/dart-vim-plugin"
+  },
+  fzf = {
+    loaded = true,
+    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/fzf"
+  },
+  ["fzf.vim"] = {
+    loaded = true,
+    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/fzf.vim"
+  },
   ["gruvbox-material"] = {
     loaded = true,
     path = "/home/tzz/.local/share/nvim/site/pack/packer/start/gruvbox-material"
+  },
+  nerdtree = {
+    loaded = true,
+    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/nerdtree"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
   ["packer.nvim"] = {
     loaded = false,
     needs_bufread = false,
     path = "/home/tzz/.local/share/nvim/site/pack/packer/opt/packer.nvim"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+  },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/popup.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   }
 }
 

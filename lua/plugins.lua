@@ -4,8 +4,14 @@ return require("packer").startup(function()
 	 -- LSP and completion
 	 use { 'neovim/nvim-lspconfig' }
 	 use { 'nvim-lua/completion-nvim' }
-
-
-
-
+     use {'dart-lang/dart-vim-plugin'}
+	 use {
+		 'nvim-telescope/telescope.nvim',
+		 requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+	 }
+     use {'preservim/nerdtree'}
+     use {'junegunn/fzf'}
+     use {'junegunn/fzf.vim'}
+	 -- use'kyazdani42/nvim-web-devicons' -- for file icons
+	 -- use 'kyazdani42/nvim-tree.lua'
 end)
