@@ -13,6 +13,8 @@ return require("packer").startup(function()
      use {'junegunn/fzf'} -- fzf#install()
      use {'junegunn/fzf.vim'}
      use {'MattesGroeger/vim-bookmarks'}
+
+    use {'easymotion/vim-easymotion'}
 	 -- use'kyazdani42/nvim-web-devicons' -- for file icons
 	 -- use 'kyazdani42/nvim-tree.lua'
 end)

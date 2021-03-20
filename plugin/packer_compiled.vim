@@ -76,6 +76,10 @@ _G.packer_plugins = {
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/tzz/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+  },
+  ["vim-bookmarks"] = {
+    loaded = true,
+    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/vim-bookmarks"
   }
 }
 
