@@ -1,6 +1,7 @@
 local utils = require("utils")
 local on_attach = function(client, bufnr)
-    --require('completion').on_attach()
+     vim.cmd("set completeopt=menuone,noinsert,noselect")
+    require('completion').on_attach()
 
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
