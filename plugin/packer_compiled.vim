@@ -12,8 +12,8 @@ packadd packer.nvim
 try
 
 lua << END
-local package_path_str = "/home/tzz/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/tzz/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/tzz/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/tzz/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/tzz/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/Users/koi_town/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/koi_town/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/koi_town/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/koi_town/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/koi_town/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -34,48 +34,48 @@ end
 _G.packer_plugins = {
   ["completion-nvim"] = {
     loaded = true,
-    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/completion-nvim"
+    path = "/Users/koi_town/.local/share/nvim/site/pack/packer/start/completion-nvim"
   },
   ["dart-vim-plugin"] = {
     loaded = true,
-    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/dart-vim-plugin"
+    path = "/Users/koi_town/.local/share/nvim/site/pack/packer/start/dart-vim-plugin"
   },
   fzf = {
     loaded = true,
-    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/fzf"
+    path = "/Users/koi_town/.local/share/nvim/site/pack/packer/start/fzf"
   },
   ["fzf.vim"] = {
     loaded = true,
-    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/fzf.vim"
+    path = "/Users/koi_town/.local/share/nvim/site/pack/packer/start/fzf.vim"
   },
   ["gruvbox-material"] = {
     loaded = true,
-    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/gruvbox-material"
+    path = "/Users/koi_town/.local/share/nvim/site/pack/packer/start/gruvbox-material"
   },
   nerdtree = {
     loaded = true,
-    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/nerdtree"
+    path = "/Users/koi_town/.local/share/nvim/site/pack/packer/start/nerdtree"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/Users/koi_town/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
   ["packer.nvim"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/tzz/.local/share/nvim/site/pack/packer/opt/packer.nvim"
+    path = "/Users/koi_town/.local/share/nvim/site/pack/packer/opt/packer.nvim"
   },
-  tzzNvimPlugin = {
+  ["space-vim-theme"] = {
     loaded = true,
-    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/tzzNvimPlugin"
+    path = "/Users/koi_town/.local/share/nvim/site/pack/packer/start/space-vim-theme"
   },
   ["vim-bookmarks"] = {
     loaded = true,
-    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/vim-bookmarks"
+    path = "/Users/koi_town/.local/share/nvim/site/pack/packer/start/vim-bookmarks"
   },
   ["vim-easymotion"] = {
     loaded = true,
-    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/vim-easymotion"
+    path = "/Users/koi_town/.local/share/nvim/site/pack/packer/start/vim-easymotion"
   }
 }
 

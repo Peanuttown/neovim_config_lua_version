@@ -9,10 +9,15 @@ return require("packer").startup(function()
 	 --     'nvim-telescope/telescope.nvim',
 	 --     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
 	 -- }
+--	 use {
+--		 'nvim-telescope/telescope.nvim',
+--		 requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+--	 }
      use {'preservim/nerdtree'}
      use {'junegunn/fzf'} -- fzf#install()
      use {'junegunn/fzf.vim'}
      use {'MattesGroeger/vim-bookmarks'}
+     use {'liuchengxu/space-vim-theme'}
 
     use {'easymotion/vim-easymotion'}
     -- use {"akinsho/flutter-tools.nvim", requires = {"neovim/nvim-lspconfig"}}
