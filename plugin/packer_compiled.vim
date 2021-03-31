@@ -65,21 +65,17 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/home/tzz/.local/share/nvim/site/pack/packer/opt/packer.nvim"
   },
-  ["plenary.nvim"] = {
+  tzzNvimPlugin = {
     loaded = true,
-    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/plenary.nvim"
-  },
-  ["popup.nvim"] = {
-    loaded = true,
-    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/popup.nvim"
-  },
-  ["telescope.nvim"] = {
-    loaded = true,
-    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/tzzNvimPlugin"
   },
   ["vim-bookmarks"] = {
     loaded = true,
     path = "/home/tzz/.local/share/nvim/site/pack/packer/start/vim-bookmarks"
+  },
+  ["vim-easymotion"] = {
+    loaded = true,
+    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/vim-easymotion"
   }
 }
 

@@ -1,5 +1,6 @@
 local utils = require("utils")
 local on_attach = function(client, bufnr)
+
      vim.cmd("set completeopt=menuone,noinsert,noselect")
     require('completion').on_attach()
 
@@ -49,6 +50,7 @@ local on_attach = function(client, bufnr)
         augroup END
         ]], false)
     end
+    vim.cmd("inoremap <cr> <Cmd> call TzzEnter()<Cr>")
 end
 
 
@@ -91,7 +93,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true;
 -- LSPs
 local servers = { "pyright", "rust_analyzer", "gopls", "tsserver","dartls" }
 for _, lsp in ipairs(servers) do
-    nvim_lsp[lsp].setup { 
+    local params = { 
         capabilities = capabilities;
         on_attach = on_attach;
         init_options = {
@@ -100,4 +102,5 @@ for _, lsp in ipairs(servers) do
             closingLabels = true,
         };
     }
+    nvim_lsp[lsp].setup(params) 
 end

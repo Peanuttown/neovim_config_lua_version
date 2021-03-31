@@ -25,7 +25,8 @@ vim.cmd("inoremap -ch တ")
 -- u1008
 vim.cmd("inoremap -yy ဈ")
 
-vim.cmd("inoremap <c-j> <esc>")
+-- vim.cmd("inoremap <c-j> <esc>")
+    vim.cmd("inoremap <c-j> <Cmd> call TzzEnter()<Cr>")
 
 vim.cmd("tnoremap <c-j> <c-\\><c-n>")
 
@@ -40,6 +41,9 @@ vim.cmd("inoremap <c-a> <esc>I")
 vim.cmd("nnoremap -tt :tabnew<CR>:terminal<CR>")
 
 vim.cmd("nnoremap <s-u> :e#<CR>")
+vim.cmd("inoremap \" \"\"<Left>")
+vim.cmd("inoremap ( ()<Left>")
+vim.cmd("inoremap { {}<Left>")
 
 -- တ  unknown option
 vim.o.wildignorecase=true
@@ -47,3 +51,6 @@ vim.wo.number = true
 -- ဈ
 
 vim.cmd("nnoremap -ep :e ~/.config/nvim/lua/plugins.lua<CR>")
+
+
+
