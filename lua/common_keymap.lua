@@ -53,4 +53,5 @@ vim.wo.number = true
 vim.cmd("nnoremap -ep :e ~/.config/nvim/lua/plugins.lua<CR>")
 
 
-
+vim.cmd("inoremap \" \"\"<LEFT>")
+vim.cmd("inoremap { {}<LEFT>")
