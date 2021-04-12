@@ -61,4 +61,5 @@ vim.cmd("inoremap <c-k> <Up>")
 
 
 
-
+vim.cmd("inoremap \" \"\"<LEFT>")
+vim.cmd("inoremap { {}<LEFT>")
