@@ -15,8 +15,10 @@ return require("packer").startup(function()
      use {'MattesGroeger/vim-bookmarks'}
 
     use {'easymotion/vim-easymotion'}
+     -- use {'OmniSharp/omnisharp-vim' ,opt=true}
     -- use {"akinsho/flutter-tools.nvim", requires = {"neovim/nvim-lspconfig"}}
     -- use {'Peanuttown/tzzNvimPlugin'}
 	 -- use'kyazdani42/nvim-web-devicons' -- for file icons
 	 -- use 'kyazdani42/nvim-tree.lua'
 end)
+

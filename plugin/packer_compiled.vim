@@ -60,14 +60,15 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/tzz/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
+  ["omnisharp-vim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/tzz/.local/share/nvim/site/pack/packer/opt/omnisharp-vim"
+  },
   ["packer.nvim"] = {
     loaded = false,
     needs_bufread = false,
     path = "/home/tzz/.local/share/nvim/site/pack/packer/opt/packer.nvim"
-  },
-  tzzNvimPlugin = {
-    loaded = true,
-    path = "/home/tzz/.local/share/nvim/site/pack/packer/start/tzzNvimPlugin"
   },
   ["vim-bookmarks"] = {
     loaded = true,

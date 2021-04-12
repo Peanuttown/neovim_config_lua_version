@@ -1,20 +1,20 @@
 local utils = require("utils")
-local on_attach = function(client, bufnr)
 
+local attach_common = function(client,bufnr)
      vim.cmd("set completeopt=menuone,noinsert,noselect")
     require('completion').on_attach()
 
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
-    buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
+    buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
     -- Mappings.
     local opts = { noremap=true, silent=true }
     buf_set_keymap('i', '<c-o>', '<Cmd>lua vim.lsp.omnifunc()<CR>', opts)
     -- vim.cmd("imap <silent> <c-p> <Plug>(completion_trigger)")
     buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-    buf_set_keymap('n', '<c-]>', '<Cmd>lua jumpToDef()<CR>', opts)
+    buf_set_keymap('n', '<c-]>', '<Cmd>lua jumpToDef(vim.lsp.buf.definition)<CR>', opts)
     -- buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
     buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
     buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
@@ -54,6 +54,22 @@ local on_attach = function(client, bufnr)
 end
 
 
+function tzz_jump_def()
+    vim.cmd("OmniSharpGotoDefinition")
+end
+
+local on_attach_omni_sharp = function(client, bufnr)
+    local opts = { noremap=true, silent=true }
+    attach_common(client,bufnr)
+     vim.api.nvim_buf_set_keymap(bufnr,'n', '<c-]>', '<Cmd>lua jumpToDef(tzz_jump_def)<CR>', opts ) 
+     -- :OmniSharpGotoDefinition
+end
+
+local on_attach = function(client, bufnr)
+    attach_common(client,bufnr)
+end
+
+
 local nvim_lsp = require('lspconfig')
 -- require'snippets'.use_suggested_mappings(true) -- for snippets.vim
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -80,18 +96,21 @@ capabilities.textDocument.codeAction = {
 local vimfn = vim.fn
 
 
-function jumpToDef()
+function jumpToDef(doJump)
     if utils.buffer_modified() and (vimfn.len(vimfn.win_findbuf(vimfn.bufnr('%'))) < 2 )then
         vim.cmd("normal -vs")
     end
-    vim.lsp.buf.definition()
+    -- vim.lsp.buf.definition()
+    doJump()
 end
 
 -- Snippets
 capabilities.textDocument.completion.completionItem.snippetSupport = true;
 
+local omni_sharp_bin_path = "/home/tzz/tools/omni_sharp/run"
 -- LSPs
-local servers = { "pyright", "rust_analyzer", "gopls", "tsserver","dartls" }
+ local servers = { "pyright", "rust_analyzer", "gopls", "tsserver","dartls" }
+--  local servers = { "pyright", "rust_analyzer", "gopls", "tsserver","dartls" }
 for _, lsp in ipairs(servers) do
     local params = { 
         capabilities = capabilities;
@@ -102,5 +121,9 @@ for _, lsp in ipairs(servers) do
             closingLabels = true,
         };
     }
+    if (lsp == "omnisharp") then
+        params.cmd = {omni_sharp_bin_path,"--languageserver"}
+         -- params.on_attach = on_attach_omni_sharp
+    end
     nvim_lsp[lsp].setup(params) 
 end

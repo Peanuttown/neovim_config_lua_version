@@ -1,11 +1,15 @@
+local os = require("os")
 --edit common_keymap.lua
 vim.cmd("nnoremap -ek :e ~/.config/nvim/lua/common_keymap.lua<CR>")
 
 -- edit init.lua
-vim.cmd("nnoremap -es :e $NVIMRC<CR>")
+vim.cmd(string.format("nnoremap -es :e %s<CR>",os.getenv("NVIMRC")))
+-- vim.api.nvim_set_keymap('n',"-es","e " .. os.getenv("NVIMRC") .. "<CR>",{})
 
 -- TODO source init.lua
-vim.cmd("nnoremap -ees :source $NVIMRC<CR>")
+vim.cmd(string.format(
+	"nnoremap -ees :luafile %s<CR>",os.getenv("NVIMRC")
+))
 
 -- vsplit windows
 vim.cmd("nnoremap -vs :vs<CR><c-w>l")
@@ -25,6 +29,7 @@ vim.cmd("inoremap -ch တ")
 -- u1008
 vim.cmd("inoremap -yy ဈ")
 
+vim.cmd("nnoremap -tc :terminal<CR>")
 -- vim.cmd("inoremap <c-j> <esc>")
     vim.cmd("inoremap <c-j> <Cmd> call TzzEnter()<Cr>")
 
@@ -49,8 +54,11 @@ vim.cmd("inoremap { {}<Left>")
 vim.o.wildignorecase=true
 vim.wo.number = true
 -- ဈ
-
 vim.cmd("nnoremap -ep :e ~/.config/nvim/lua/plugins.lua<CR>")
+
+vim.cmd("inoremap <c-j> <Down>")
+vim.cmd("inoremap <c-k> <Up>")
+
 
 
 
